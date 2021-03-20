@@ -8,6 +8,8 @@ TagManager:
   - Cell
   - Terrain
   - Maze
+  - End
+  - Start
   layers:
   - Default
   - TransparentFX
