@@ -39,28 +39,29 @@ public class Maze : MonoBehaviour
                 mazeCells[row, col].floor = Instantiate(floor, new Vector3 (row * size, -(size/2f), col*size), Quaternion.identity);
                 mazeCells[row, col].floor.transform.parent = this.transform;
                 mazeCells[row, col].floor.name = "Floor " + row + ", " + col;
+                
 
                 // Instantiate West wall
                 if (col == 0) {
-                    mazeCells[row, col].wWall = Instantiate(wall, new Vector3(row*size, 0, (col*size) - (size/2f)), Quaternion.identity);
+                    mazeCells[row, col].wWall = Instantiate(wall, new Vector3(row*size, 12, (col*size) - (size/2f)), Quaternion.identity);
                     mazeCells[row, col].wWall.transform.parent = this.transform;
                     mazeCells[row, col].wWall.name = "West Wall " + row + ", " + col;
                 }
                 // Instantiate East wall
-                mazeCells[row, col].eWall = Instantiate(wall, new Vector3(row*size, 0, (col*size) + (size/2f)), Quaternion.identity);
+                mazeCells[row, col].eWall = Instantiate(wall, new Vector3(row*size, 12, (col*size) + (size/2f)), Quaternion.identity);
                 mazeCells[row, col].eWall.transform.parent = this.transform;
                 mazeCells[row, col].eWall.name = "East Wall " + row + ", " + col;
                 
                 // Instantiate North wall
                 if (row == 0) {
-                    mazeCells[row, col].nWall = Instantiate(wall, new Vector3((row*size) - (size/2f), 0, col*size), Quaternion.identity);
+                    mazeCells[row, col].nWall = Instantiate(wall, new Vector3((row*size) - (size/2f), 12, col*size), Quaternion.identity);
                     mazeCells[row, col].nWall.transform.parent = this.transform;
                     mazeCells[row, col].nWall.name = "North Wall " + row + ", " + col;
                     mazeCells[row, col].nWall.transform.Rotate (Vector3.up * 90f);
                 }
 
                 // Instantiate South wall
-                mazeCells[row, col].sWall = Instantiate(wall, new Vector3((row*size) + (size/2f), 0, col*size), Quaternion.identity);
+                mazeCells[row, col].sWall = Instantiate(wall, new Vector3((row*size) + (size/2f), 12, col*size), Quaternion.identity);
                 mazeCells[row, col].sWall.transform.parent = this.transform;
                 mazeCells[row, col].sWall.name = "South Wall " + row + ", " + col;
                 mazeCells[row, col].sWall.transform.Rotate (Vector3.up * 90f);

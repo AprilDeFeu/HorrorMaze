@@ -5,7 +5,6 @@ using UnityEngine;
 public class MeshCombiner : MonoBehaviour
 {
     public Material mat;
-    int num = 0;
     void Start()
     {
         Invoke("CombineMeshes", 0.1f);
