@@ -18,17 +18,17 @@ public class Looker : MonoBehaviour
     {
         if (Input.GetAxis("Mouse ScrollWheel") > 0f)
         {
-            if (mouseSensitivity < 250) mouseSensitivity++;
+            if (mouseSensitivity < 250) mouseSensitivity += 3;
         } 
         else if (Input.GetAxis("Mouse ScrollWheel") < 0f)
         {
-            if (mouseSensitivity > 10) mouseSensitivity--;
+            if (mouseSensitivity > 10) mouseSensitivity-= 3;
         }
 
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
         xRotation -= mouseY;
-        xRotation = Mathf.Clamp(xRotation, -90f, 90f);
+        xRotation = Mathf.Clamp(xRotation, -70f, 50f);
 
 
 

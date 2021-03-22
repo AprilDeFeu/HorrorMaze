@@ -11,6 +11,9 @@ TagManager:
   - End
   - Start
   - Resolution
+  - SFX
+  - Audio
+  - Canvas
   layers:
   - Default
   - TransparentFX
