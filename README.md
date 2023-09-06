@@ -7,6 +7,7 @@ The nature of this algorithm is based upon 'recursive backtracking', albeit appl
 - [ ] **Kruskal's** (TODO)
 - [ ] **Aldous-Broder** (TODO)
 - [ ] **Wilson's Algorithm** (TODO)
+- [ ] **"Blobby" Recursive Subdivision Algorithm** (TODO)
 - [ ] **Enemies** (TODO) 
 
 Music is done by me as well.
